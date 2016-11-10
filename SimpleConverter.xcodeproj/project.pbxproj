@@ -25,6 +25,7 @@
 		916C95761DD2D065008254D4 /* SimpleNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */; };
 		916C95771DD2D065008254D4 /* SimpleNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		916C957D1DD2D081008254D4 /* SimpleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C957C1DD2D081008254D4 /* SimpleNetworking.swift */; };
+		918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BA49A1DD4AF7700428843 /* Conversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		916C95711DD2D065008254D4 /* SimpleNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleNetworking.h; sourceTree = "<group>"; };
 		916C95721DD2D065008254D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916C957C1DD2D081008254D4 /* SimpleNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworking.swift; sourceTree = "<group>"; };
+		918BA49A1DD4AF7700428843 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		916C95571DD2D00F008254D4 /* SimpleConverter */ = {
 			isa = PBXGroup;
 			children = (
+				918BA4991DD4A93B00428843 /* Model */,
 				916C95581DD2D00F008254D4 /* AppDelegate.swift */,
 				916C955A1DD2D00F008254D4 /* ViewController.swift */,
 				916C955C1DD2D00F008254D4 /* Main.storyboard */,
@@ -190,6 +193,14 @@
 				916C95721DD2D065008254D4 /* Info.plist */,
 			);
 			path = SimpleNetworking;
+			sourceTree = "<group>";
+		};
+		918BA4991DD4A93B00428843 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				918BA49A1DD4AF7700428843 /* Conversion.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */,
 				916C955B1DD2D00F008254D4 /* ViewController.swift in Sources */,
 				916C95591DD2D00F008254D4 /* AppDelegate.swift in Sources */,
 			);
@@ -693,6 +705,7 @@
 				91542DA81DD47C0600EC1767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91542DDE1DD47D4500EC1767 /* Build configuration list for PBXNativeTarget "GraphKitTests" */ = {
 			isa = XCConfigurationList;
@@ -701,6 +714,7 @@
 				91542DE01DD47D4500EC1767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		916C95501DD2D00F008254D4 /* Build configuration list for PBXProject "SimpleConverter" */ = {
 			isa = XCConfigurationList;

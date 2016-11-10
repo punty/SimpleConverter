@@ -20,6 +20,10 @@ public enum GraphKitError: Error {
 public class Graph<T> where T:Hashable {
     internal lazy var edgesList: [AdjacencyList<T>] = [AdjacencyList<T>] ()
     
+    public init () {
+        //nothing to do
+    }
+    
     //create a vertex with our data
     public func createVertex(data: T) {
         let dataMathcing = edgesList.map {$0.vertex}.filter {$0.data ==  data}
@@ -30,7 +34,6 @@ public class Graph<T> where T:Hashable {
     }
     
     public func addDirectedEdge(from: T, to: T, withWeight weight: Double) throws {
-        // works
         guard let vertexFrom = vertex(data: from), let vertexTo = vertex(data: to) else {
             throw GraphKitError.VertexNotFoundInGraph
         }
@@ -40,7 +43,6 @@ public class Graph<T> where T:Hashable {
     }
     
     internal func addDirectedEdge(from: Vertex<T>, to: Vertex<T>, withWeight weight: Double) {
-        // works
         let edge = Edge(from: from, to: to, weight: weight)
         let edgeList = edgesList[from.index]
         edgeList.add(edge:edge)
@@ -83,7 +85,7 @@ public class Graph<T> where T:Hashable {
         let vertexes = edgesList.map {$0.vertex}
         var distances = Array(repeating: Double.infinity, count: vertexes.count)
         //lets assume from index 0
-        distances[vertexFrom.index] = 0;
+        distances[vertexFrom.index] = 0
         
         var first = Pair(index: 0, distance: 0)
         CFBinaryHeapAddValue(pq, &first)

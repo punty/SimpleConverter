@@ -9,13 +9,13 @@
 import Foundation
 
 public class AdjacencyList<T> where T: Equatable, T: Hashable {
-    var vertex: Vertex<T>
     
+    var vertex: Vertex<T>
     lazy var edges: Set<Edge<T>> = Set<Edge<T>> ()
+    
     init(vertex: Vertex<T>) {
         self.vertex = vertex
     }
-    
     func add(edge: Edge<T>) {
         edges.insert(edge)
     }
