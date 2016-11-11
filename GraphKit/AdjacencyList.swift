@@ -16,6 +16,7 @@ public class AdjacencyList<T> where T: Equatable, T: Hashable {
     init(vertex: Vertex<T>) {
         self.vertex = vertex
     }
+    
     func add(edge: Edge<T>) {
         edges.insert(edge)
     }

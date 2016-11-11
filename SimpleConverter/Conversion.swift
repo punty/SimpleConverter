@@ -10,7 +10,7 @@ import Foundation
 import GraphKit
 import SimpleNetworking
 
-fileprivate struct Conversion: JSONInitializable {
+private struct Conversion: JSONInitializable {
     var from: String
     var to: String
     var rate: Double
@@ -28,23 +28,24 @@ fileprivate struct Conversion: JSONInitializable {
 }
 
 struct ConversionData: JSONInitializable {
-    fileprivate let conversions: [Conversion]
     
-    lazy var graphView: Graph<String> = self.createGraphView()
+    private let conversions: [Conversion]
     
-    internal func createGraphView() -> Graph<String> {
-        let graph = Graph<String>()
-        for conversion in self.conversions {
-            graph.createVertex(data: conversion.from)
-            graph.createVertex(data: conversion.to)
-            try! graph.addDirectedEdge(from: conversion.from, to: conversion.to, withWeight: conversion.rate)
-            try! graph.addDirectedEdge(from: conversion.to, to: conversion.from, withWeight: 1.0 / conversion.rate)
-        }
-        return graph
-    }
+    let graphView: Graph<String>
     
     init(json: [String : Any]) throws {
-        guard let conversionsJson = json["conversions"] as? [[String:Any]] else {throw ServiceError.missing("conversions")}
+        guard let conversionsJson = json["conversions"] as? [[String:Any]] else {
+            throw ServiceError.missing("conversions")
+        }
+        
         conversions = conversionsJson.flatMap {try? Conversion (json: $0)}
+        graphView = Graph<String>()
+        
+        for conversion in self.conversions {
+            graphView.createVertex(data: conversion.from)
+            graphView.createVertex(data: conversion.to)
+            try! graphView.addDirectedEdge(from: conversion.from, to: conversion.to, withWeight: conversion.rate)
+            try! graphView.addDirectedEdge(from: conversion.to, to: conversion.from, withWeight: 1.0 / conversion.rate)
+        }
     }
 }

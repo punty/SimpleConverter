@@ -10,7 +10,7 @@ import Foundation
 
 //Something that can become use as URLRequest
 public protocol URLRequestConvertible {
-    func asURLRequest() -> URLRequest?
+    func asURLRequest() throws -> URLRequest
 }
 
 //Describe network parsing and serialising error
@@ -61,7 +61,8 @@ public final class ServiceClient: ServiceClientType {
     }
     
     public func get<T:JSONInitializable>(api: URLRequestConvertible, completion:@escaping (T?,Error?)->()) {
-        guard let request = api.asURLRequest() else {completion(nil, ServiceError.networkError)
+        guard let request = try? api.asURLRequest() else {
+            completion(nil, ServiceError.networkError)
             return
         }
         URLSession.shared.dataTask(with: request) {

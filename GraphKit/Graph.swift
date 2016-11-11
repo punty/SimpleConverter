@@ -20,6 +20,12 @@ public enum GraphKitError: Error {
 public class Graph<T> where T:Hashable {
     internal lazy var edgesList: [AdjacencyList<T>] = [AdjacencyList<T>] ()
     
+    //return the vertext corresponding to the data
+    internal func vertex(data: T) -> Vertex<T>? {
+        let dataMathcing = edgesList.map {$0.vertex}.filter {$0.data ==  data}
+        return dataMathcing.first
+    }
+    
     public init () {
         //nothing to do
     }
@@ -33,6 +39,7 @@ public class Graph<T> where T:Hashable {
         }
     }
     
+    //Add an edge between two nodes and define the weight
     public func addDirectedEdge(from: T, to: T, withWeight weight: Double) throws {
         guard let vertexFrom = vertex(data: from), let vertexTo = vertex(data: to) else {
             throw GraphKitError.VertexNotFoundInGraph
@@ -42,23 +49,12 @@ public class Graph<T> where T:Hashable {
         edgeList.add(edge:edge)
     }
     
-    internal func addDirectedEdge(from: Vertex<T>, to: Vertex<T>, withWeight weight: Double) {
-        let edge = Edge(from: from, to: to, weight: weight)
-        let edgeList = edgesList[from.index]
-        edgeList.add(edge:edge)
-    }
-    
-    public func vertex(data: T) -> Vertex<T>? {
-        let dataMathcing = edgesList.map {$0.vertex}.filter {$0.data ==  data}
-        return dataMathcing.first
-    }
-    
-    
     public func shortestPath(from:T, to:T) throws -> Double {
         
         guard let vertexFrom = vertex(data: from), let vertexTo = vertex(data: to) else {
             throw GraphKitError.VertexNotFoundInGraph
         }
+        
         var callBacks = CFBinaryHeapCallBacks()
         callBacks.compare = { (first,second , _) in
             guard let firstPointer = first, let secondPointer = second else {
@@ -106,5 +102,4 @@ public class Graph<T> where T:Hashable {
         }
         return distances[vertexTo.index]
     }
-    
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914323541DD56CCD00C8E47A /* SimpleConverterAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914323531DD56CCD00C8E47A /* SimpleConverterAPIs.swift */; };
+		914323571DD5A49F00C8E47A /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914323561DD5A49F00C8E47A /* ConverterViewModel.swift */; };
+		9143235C1DD5A4E200C8E47A /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143235B1DD5A4E200C8E47A /* ConverterViewController.swift */; };
+		9143235E1DD5B94C00C8E47A /* ConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143235D1DD5B94C00C8E47A /* ConversionService.swift */; };
 		91542DA21DD47C0600EC1767 /* GraphKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 91542DA01DD47C0600EC1767 /* GraphKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91542DA51DD47C0600EC1767 /* GraphKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91542D9E1DD47C0600EC1767 /* GraphKit.framework */; };
 		91542DA61DD47C0600EC1767 /* GraphKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91542D9E1DD47C0600EC1767 /* GraphKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -17,7 +21,6 @@
 		91542DDB1DD47D4500EC1767 /* GraphKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91542D9E1DD47C0600EC1767 /* GraphKit.framework */; };
 		91542DE21DD47F0000EC1767 /* AdjacencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91542DE11DD47F0000EC1767 /* AdjacencyList.swift */; };
 		916C95591DD2D00F008254D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C95581DD2D00F008254D4 /* AppDelegate.swift */; };
-		916C955B1DD2D00F008254D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C955A1DD2D00F008254D4 /* ViewController.swift */; };
 		916C955E1DD2D00F008254D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 916C955C1DD2D00F008254D4 /* Main.storyboard */; };
 		916C95601DD2D00F008254D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916C955F1DD2D00F008254D4 /* Assets.xcassets */; };
 		916C95631DD2D00F008254D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 916C95611DD2D00F008254D4 /* LaunchScreen.storyboard */; };
@@ -26,6 +29,7 @@
 		916C95771DD2D065008254D4 /* SimpleNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		916C957D1DD2D081008254D4 /* SimpleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C957C1DD2D081008254D4 /* SimpleNetworking.swift */; };
 		918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BA49A1DD4AF7700428843 /* Conversion.swift */; };
+		AA22F422C33775576F186221 /* Pods_SimpleConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D5E2BB68C7524D4F556EB4 /* Pods_SimpleConverter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		217F22E2A0A34123B270336F /* Pods-SimpleConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleConverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleConverter/Pods-SimpleConverter.debug.xcconfig"; sourceTree = "<group>"; };
+		914323531DD56CCD00C8E47A /* SimpleConverterAPIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleConverterAPIs.swift; sourceTree = "<group>"; };
+		914323561DD5A49F00C8E47A /* ConverterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
+		9143235B1DD5A4E200C8E47A /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		9143235D1DD5B94C00C8E47A /* ConversionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionService.swift; sourceTree = "<group>"; };
 		91542D9E1DD47C0600EC1767 /* GraphKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91542DA01DD47C0600EC1767 /* GraphKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
 		91542DA11DD47C0600EC1767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,7 +89,6 @@
 		91542DE11DD47F0000EC1767 /* AdjacencyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjacencyList.swift; sourceTree = "<group>"; };
 		916C95551DD2D00F008254D4 /* SimpleConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916C95581DD2D00F008254D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		916C955A1DD2D00F008254D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		916C955D1DD2D00F008254D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		916C955F1DD2D00F008254D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		916C95621DD2D00F008254D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 		916C95721DD2D065008254D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916C957C1DD2D081008254D4 /* SimpleNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworking.swift; sourceTree = "<group>"; };
 		918BA49A1DD4AF7700428843 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		C29EB7DE4378EED75D82C489 /* Pods-SimpleConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleConverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleConverter/Pods-SimpleConverter.release.xcconfig"; sourceTree = "<group>"; };
+		D8D5E2BB68C7524D4F556EB4 /* Pods_SimpleConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 			files = (
 				91542DA51DD47C0600EC1767 /* GraphKit.framework in Frameworks */,
 				916C95761DD2D065008254D4 /* SimpleNetworking.framework in Frameworks */,
+				AA22F422C33775576F186221 /* Pods_SimpleConverter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +138,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CAA703D08C33B23958867A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				217F22E2A0A34123B270336F /* Pods-SimpleConverter.debug.xcconfig */,
+				C29EB7DE4378EED75D82C489 /* Pods-SimpleConverter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		914323521DD56CB200C8E47A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				914323531DD56CCD00C8E47A /* SimpleConverterAPIs.swift */,
+				9143235D1DD5B94C00C8E47A /* ConversionService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		914323551DD5A48D00C8E47A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				914323561DD5A49F00C8E47A /* ConverterViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		914323581DD5A4AB00C8E47A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9143235B1DD5A4E200C8E47A /* ConverterViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		91542D9F1DD47C0600EC1767 /* GraphKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +202,8 @@
 				91542D9F1DD47C0600EC1767 /* GraphKit */,
 				91542DD71DD47D4500EC1767 /* GraphKitTests */,
 				916C95561DD2D00F008254D4 /* Products */,
+				1CAA703D08C33B23958867A4 /* Pods */,
+				B0F7F9EB05885CFBF956C384 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,9 +221,11 @@
 		916C95571DD2D00F008254D4 /* SimpleConverter */ = {
 			isa = PBXGroup;
 			children = (
+				914323581DD5A4AB00C8E47A /* View */,
+				914323551DD5A48D00C8E47A /* ViewModel */,
+				914323521DD56CB200C8E47A /* Services */,
 				918BA4991DD4A93B00428843 /* Model */,
 				916C95581DD2D00F008254D4 /* AppDelegate.swift */,
-				916C955A1DD2D00F008254D4 /* ViewController.swift */,
 				916C955C1DD2D00F008254D4 /* Main.storyboard */,
 				916C955F1DD2D00F008254D4 /* Assets.xcassets */,
 				916C95611DD2D00F008254D4 /* LaunchScreen.storyboard */,
@@ -201,6 +250,14 @@
 				918BA49A1DD4AF7700428843 /* Conversion.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		B0F7F9EB05885CFBF956C384 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8D5E2BB68C7524D4F556EB4 /* Pods_SimpleConverter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +322,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 916C95671DD2D00F008254D4 /* Build configuration list for PBXNativeTarget "SimpleConverter" */;
 			buildPhases = (
+				01C07AA0F15FB095098DBBFD /* [CP] Check Pods Manifest.lock */,
 				916C95511DD2D00F008254D4 /* Sources */,
 				916C95521DD2D00F008254D4 /* Frameworks */,
 				916C95531DD2D00F008254D4 /* Resources */,
 				916C957B1DD2D065008254D4 /* Embed Frameworks */,
+				7938AC3ACC84A41E9B52FA3B /* [CP] Embed Pods Frameworks */,
+				3D26D744C35F8E422876219F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -384,6 +444,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01C07AA0F15FB095098DBBFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3D26D744C35F8E422876219F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleConverter/Pods-SimpleConverter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7938AC3ACC84A41E9B52FA3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleConverter/Pods-SimpleConverter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91542D991DD47C0600EC1767 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -409,8 +517,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */,
-				916C955B1DD2D00F008254D4 /* ViewController.swift in Sources */,
+				9143235E1DD5B94C00C8E47A /* ConversionService.swift in Sources */,
+				914323571DD5A49F00C8E47A /* ConverterViewModel.swift in Sources */,
 				916C95591DD2D00F008254D4 /* AppDelegate.swift in Sources */,
+				914323541DD56CCD00C8E47A /* SimpleConverterAPIs.swift in Sources */,
+				9143235C1DD5A4E200C8E47A /* ConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +735,7 @@
 		};
 		916C95681DD2D00F008254D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217F22E2A0A34123B270336F /* Pods-SimpleConverter.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -637,6 +749,7 @@
 		};
 		916C95691DD2D00F008254D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C29EB7DE4378EED75D82C489 /* Pods-SimpleConverter.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
