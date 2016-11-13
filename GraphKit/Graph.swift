@@ -87,7 +87,7 @@ public class Graph<T> where T:Hashable {
         //lets assume from index 0
         distances[vertexFrom.index] = 0
         
-        var first = Pair(index: 0, distance: 0)
+        var first = Pair(index: vertexFrom.index, distance: 0)
         CFBinaryHeapAddValue(pq, &first)
         while CFBinaryHeapGetCount(pq) > 0 {
             let pair = CFBinaryHeapGetMinimum(pq).assumingMemoryBound(to: Pair.self).pointee

@@ -44,7 +44,7 @@ final class ConverterViewModel: ConverterViewModelType {
     //output
     var toCurrencyDriver: Driver<String>
     var fromCurrencyDriver: Driver<String>
-    var currencies: Variable<[String]>
+    var currencies: Variable<ConversionData?>
     
     
     var service: ConversionServiceProtocol
@@ -56,17 +56,29 @@ final class ConverterViewModel: ConverterViewModelType {
             fromValue: Driver<String>,
             toValue: Driver<String>
         ),
-        service: ConversionServiceProtocol
+        service: ConversionServiceProtocol) {
         
-        ) {
-        
-        currencies = Variable<[String]>([])
+        currencies = Variable<ConversionData?>(nil)
         fromCurrency = input.fromCurrency
         toCurrency = input.toCurrency
         fromValue = input.fromValue
         toValue = input.toValue
         rate = Variable<Double?> (2.0)
+        
         let rateDriver = rate.asDriver()
+        
+        Driver.combineLatest(fromCurrency, toCurrency, currencies.asDriver()) {
+            from, to, data in
+            print("122")
+            if let data = data {
+                do {
+                   return try data.graphView.shortestPath(from: from, to: to)
+                } catch {
+                    return 0.0
+                }
+            }
+            return 0.0
+        }.drive(rate).addDisposableTo(disposeBag)
         
         toCurrencyDriver = Driver.combineLatest(fromValue, rateDriver) {
             from, rate in
@@ -79,7 +91,6 @@ final class ConverterViewModel: ConverterViewModelType {
         }
         fromCurrencyDriver = Driver.combineLatest(toValue, rateDriver) {
             from, rate in
-            print("2")
             let fromValue = Double(from)
             if let fromValue = fromValue, let rate = rate {
                 return String (fromValue * rate)
@@ -95,8 +106,7 @@ final class ConverterViewModel: ConverterViewModelType {
                 return
             }
             if let data = data {
-                self.currencies.value = data.currencies
-                
+                self.currencies.value = data
             }
         }
     }

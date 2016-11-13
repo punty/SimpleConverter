@@ -45,7 +45,7 @@ struct ConversionData: JSONInitializable {
        
         
         for conversion in self.conversions {
-            
+            print(conversion)
             graphView.createVertex(data: conversion.from)
             graphView.createVertex(data: conversion.to)
             try! graphView.addDirectedEdge(from: conversion.from, to: conversion.to, withWeight: conversion.rate)
