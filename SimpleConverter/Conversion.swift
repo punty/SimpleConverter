@@ -33,6 +33,8 @@ struct ConversionData: JSONInitializable {
     
     let graphView: Graph<String>
     
+    let currencies: [String]
+    
     init(json: [String : Any]) throws {
         guard let conversionsJson = json["conversions"] as? [[String:Any]] else {
             throw ServiceError.missing("conversions")
@@ -40,12 +42,15 @@ struct ConversionData: JSONInitializable {
         
         conversions = conversionsJson.flatMap {try? Conversion (json: $0)}
         graphView = Graph<String>()
+       
         
         for conversion in self.conversions {
+            
             graphView.createVertex(data: conversion.from)
             graphView.createVertex(data: conversion.to)
             try! graphView.addDirectedEdge(from: conversion.from, to: conversion.to, withWeight: conversion.rate)
             try! graphView.addDirectedEdge(from: conversion.to, to: conversion.from, withWeight: 1.0 / conversion.rate)
         }
+        currencies = graphView.vertexes()
     }
 }

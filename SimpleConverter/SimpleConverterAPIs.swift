@@ -20,6 +20,8 @@ enum Router: URLRequestConvertible {
         //set path and parameter for all the API calls
         let result: (path: String, parameters: [String:String]?) = {
             switch self {
+                //Here we can support multiple APIs for this quick example test
+                //we just include a single one
             case .conversions:
                 return ("rates.json", nil)
             }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleNetworking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

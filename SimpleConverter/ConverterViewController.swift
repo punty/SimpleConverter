@@ -7,29 +7,37 @@
 //
 
 import UIKit
+import SimpleNetworking
+import RxSwift
+import RxCocoa
+
 
 class ConverterViewController: UIViewController {
 
+    //outlets
+    @IBOutlet weak var fromCurrencyTextField: UITextField!
+    @IBOutlet weak var toCurrencyTextField: UITextField!
+    @IBOutlet weak var toValueTextField: UITextField!
+    @IBOutlet weak var fromValueTextField: UITextField!
+    
+    let disposeBag = DisposeBag()
+    
+    //this is just a quick solution for the assignment in a real app i will handle dependecy properly
+    let converterService = ConversionService(serviceClient: ServiceClient())
+    var viewModel: ConverterViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewModel = ConverterViewModel (input:
+            (fromCurrency: fromCurrencyTextField.rx.text.orEmpty.asDriver(),
+             toCurrency: toCurrencyTextField.rx.text.orEmpty.asDriver(),
+             fromValue: fromValueTextField.rx.text.orEmpty.asDriver(),
+             toValue: toValueTextField.rx.text.orEmpty.asDriver()
+            )
+            , service: converterService)
+        
+        viewModel.fromCurrencyDriver.drive(fromValueTextField.rx.text).addDisposableTo(disposeBag)
+        viewModel.toCurrencyDriver.drive(toValueTextField.rx.text).addDisposableTo(disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

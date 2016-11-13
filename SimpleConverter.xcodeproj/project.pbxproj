@@ -32,6 +32,10 @@
 		916C95771DD2D065008254D4 /* SimpleNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		916C957D1DD2D081008254D4 /* SimpleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C957C1DD2D081008254D4 /* SimpleNetworking.swift */; };
 		918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BA49A1DD4AF7700428843 /* Conversion.swift */; };
+		91FBEBDD1DD752A9008A6BC4 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */; };
+		91FBEBDE1DD752A9008A6BC4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */; };
+		91FBEBE71DD75E69008A6BC4 /* SimpleNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBEBE61DD75E69008A6BC4 /* SimpleNetworkingTests.swift */; };
+		91FBEBE91DD75E69008A6BC4 /* SimpleNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,13 @@
 			remoteInfo = GraphKit;
 		};
 		916C95741DD2D065008254D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 916C954D1DD2D00F008254D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 916C956E1DD2D065008254D4;
+			remoteInfo = SimpleNetworking;
+		};
+		91FBEBEA1DD75E69008A6BC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 916C954D1DD2D00F008254D4 /* Project object */;
 			proxyType = 1;
@@ -102,6 +113,11 @@
 		916C95721DD2D065008254D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916C957C1DD2D081008254D4 /* SimpleNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworking.swift; sourceTree = "<group>"; };
 		918BA49A1DD4AF7700428843 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		91FBEBE41DD75E69008A6BC4 /* SimpleNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FBEBE61DD75E69008A6BC4 /* SimpleNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkingTests.swift; sourceTree = "<group>"; };
+		91FBEBE81DD75E69008A6BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FBEBDD1DD752A9008A6BC4 /* RxCocoa.framework in Frameworks */,
+				91FBEBDE1DD752A9008A6BC4 /* RxSwift.framework in Frameworks */,
 				91542DA51DD47C0600EC1767 /* GraphKit.framework in Frameworks */,
 				916C95761DD2D065008254D4 /* SimpleNetworking.framework in Frameworks */,
 			);
@@ -133,6 +151,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FBEBE11DD75E69008A6BC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FBEBE91DD75E69008A6BC4 /* SimpleNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +194,9 @@
 				916C95701DD2D065008254D4 /* SimpleNetworking */,
 				91542D9F1DD47C0600EC1767 /* GraphKit */,
 				91542DD71DD47D4500EC1767 /* GraphKitTests */,
+				91FBEBE51DD75E69008A6BC4 /* SimpleNetworkingTests */,
 				916C95561DD2D00F008254D4 /* Products */,
+				91FBEBDA1DD752A9008A6BC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +207,7 @@
 				916C956F1DD2D065008254D4 /* SimpleNetworking.framework */,
 				91542D9E1DD47C0600EC1767 /* GraphKit.framework */,
 				91542DD61DD47D4500EC1767 /* GraphKitTests.xctest */,
+				91FBEBE41DD75E69008A6BC4 /* SimpleNetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +248,24 @@
 				918BA49A1DD4AF7700428843 /* Conversion.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		91FBEBDA1DD752A9008A6BC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */,
+				91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91FBEBE51DD75E69008A6BC4 /* SimpleNetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				91FBEBE61DD75E69008A6BC4 /* SimpleNetworkingTests.swift */,
+				91FBEBE81DD75E69008A6BC4 /* Info.plist */,
+			);
+			path = SimpleNetworkingTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +334,7 @@
 				916C95521DD2D00F008254D4 /* Frameworks */,
 				916C95531DD2D00F008254D4 /* Resources */,
 				916C957B1DD2D065008254D4 /* Embed Frameworks */,
+				91FBEBDF1DD752C6008A6BC4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -317,6 +365,24 @@
 			productReference = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		91FBEBE31DD75E69008A6BC4 /* SimpleNetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FBEBEC1DD75E69008A6BC4 /* Build configuration list for PBXNativeTarget "SimpleNetworkingTests" */;
+			buildPhases = (
+				91FBEBE01DD75E69008A6BC4 /* Sources */,
+				91FBEBE11DD75E69008A6BC4 /* Frameworks */,
+				91FBEBE21DD75E69008A6BC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91FBEBEB1DD75E69008A6BC4 /* PBXTargetDependency */,
+			);
+			name = SimpleNetworkingTests;
+			productName = SimpleNetworkingTests;
+			productReference = 91FBEBE41DD75E69008A6BC4 /* SimpleNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,6 +411,10 @@
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
+					91FBEBE31DD75E69008A6BC4 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 916C95501DD2D00F008254D4 /* Build configuration list for PBXProject "SimpleConverter" */;
@@ -364,6 +434,7 @@
 				916C956E1DD2D065008254D4 /* SimpleNetworking */,
 				91542D9D1DD47C0600EC1767 /* GraphKit */,
 				91542DD51DD47D4500EC1767 /* GraphKitTests */,
+				91FBEBE31DD75E69008A6BC4 /* SimpleNetworkingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -400,7 +471,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91FBEBE21DD75E69008A6BC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91FBEBDF1DD752C6008A6BC4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91542D991DD47C0600EC1767 /* Sources */ = {
@@ -446,6 +542,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91FBEBE01DD75E69008A6BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FBEBE71DD75E69008A6BC4 /* SimpleNetworkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -463,6 +567,11 @@
 			isa = PBXTargetDependency;
 			target = 916C956E1DD2D065008254D4 /* SimpleNetworking */;
 			targetProxy = 916C95741DD2D065008254D4 /* PBXContainerItemProxy */;
+		};
+		91FBEBEB1DD75E69008A6BC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 916C956E1DD2D065008254D4 /* SimpleNetworking */;
+			targetProxy = 91FBEBEA1DD75E69008A6BC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -651,6 +760,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SimpleConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fp.SimpleConverter;
@@ -664,6 +777,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SimpleConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fp.SimpleConverter;
@@ -719,6 +836,28 @@
 			};
 			name = Release;
 		};
+		91FBEBED1DD75E69008A6BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SimpleNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		91FBEBEE1DD75E69008A6BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SimpleNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,6 +902,15 @@
 			buildConfigurations = (
 				916C95791DD2D065008254D4 /* Debug */,
 				916C957A1DD2D065008254D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91FBEBEC1DD75E69008A6BC4 /* Build configuration list for PBXNativeTarget "SimpleNetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FBEBED1DD75E69008A6BC4 /* Debug */,
+				91FBEBEE1DD75E69008A6BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import SimpleNetworking
+
+protocol ConversionServiceProtocol {
+    func conversionData(completion: @escaping (ConversionData?) -> Void)
+}
+
+//here I should use API to get the latest conversion
+final class ConversionService: ConversionServiceProtocol {
+    
+    let serviceClient: ServiceClient
+    
+    init(serviceClient: ServiceClient) {
+        self.serviceClient = serviceClient
+    }
+    
+    func conversionData(completion: @escaping (ConversionData?) -> Void) {
+        serviceClient.get(api: Router.conversions) {
+            (data: ConversionData?, error:Error?) in
+            completion(data)
+        }
+    }
+    
+}

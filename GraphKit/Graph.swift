@@ -30,6 +30,10 @@ public class Graph<T> where T:Hashable {
         //nothing to do
     }
     
+    public func vertexes () -> [T] {
+        return edgesList.map {$0.vertex.data}
+    }
+    
     //create a vertex with our data
     public func createVertex(data: T) {
         let dataMathcing = edgesList.map {$0.vertex}.filter {$0.data ==  data}
@@ -49,9 +53,9 @@ public class Graph<T> where T:Hashable {
         edgeList.add(edge:edge)
     }
     
-    public func shortestPath(from:T, to:T) throws -> Double {
-        
-        guard let vertexFrom = vertex(data: from), let vertexTo = vertex(data: to) else {
+    //return an array containing the shortest paths to the node
+    public func shortestPahts(from: T) throws -> [Double] {
+        guard let vertexFrom = vertex(data: from) else {
             throw GraphKitError.VertexNotFoundInGraph
         }
         
@@ -100,6 +104,16 @@ public class Graph<T> where T:Hashable {
                 }
             }
         }
-        return distances[vertexTo.index]
+        return distances
+    }
+    
+    //return the shortest path to a specific one
+    public func shortestPath(from:T, to:T) throws -> Double {
+        let paths = try shortestPahts(from: from)
+        guard let vertexTo = vertex(data: to) else {
+            throw GraphKitError.VertexNotFoundInGraph
+        }
+        return paths[vertexTo.index]
+       
     }
 }
