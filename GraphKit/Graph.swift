@@ -18,7 +18,7 @@ public enum GraphKitError: Error {
 }
 
 public class Graph<T> where T:Hashable {
-    internal lazy var edgesList: [AdjacencyList<T>] = [AdjacencyList<T>] ()
+    public lazy var edgesList: [AdjacencyList<T>] = [AdjacencyList<T>] ()
     
     //return the vertext corresponding to the data
     internal func vertex(data: T) -> Vertex<T>? {
@@ -50,6 +50,7 @@ public class Graph<T> where T:Hashable {
         }
         let edge = Edge(from: vertexFrom, to: vertexTo, weight: weight)
         let edgeList = edgesList[vertexFrom.index]
+        print("\(edge.from.data) -> \(edge.to.data) \(edge.weight)")
         edgeList.add(edge:edge)
     }
     
@@ -58,49 +59,19 @@ public class Graph<T> where T:Hashable {
         guard let vertexFrom = vertex(data: from) else {
             throw GraphKitError.VertexNotFoundInGraph
         }
-        
-        var callBacks = CFBinaryHeapCallBacks()
-        callBacks.compare = { (first,second , _) in
-            guard let firstPointer = first, let secondPointer = second else {
-                fatalError("I want this to crash, how can we compare two non existing things?")
-            }
-            let firstPair = firstPointer.assumingMemoryBound(to: Pair.self).pointee
-            let secondPair = secondPointer.assumingMemoryBound(to: Pair.self).pointee
-            if (firstPair.distance == secondPair.distance) {
-                if (firstPair.index == secondPair.index) {
-                    return CFComparisonResult.compareEqualTo
-                }
-                if (firstPair.index > secondPair.index) {
-                    return CFComparisonResult.compareGreaterThan
-                }
-                return CFComparisonResult.compareLessThan
-            }
-            if (firstPair.distance > secondPair.distance) {
-                return CFComparisonResult.compareGreaterThan
-            }
-            return CFComparisonResult.compareLessThan
-        }
-        
-        let pq = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, nil)
-        let vertexes = edgesList.map {$0.vertex}
-        var distances = Array(repeating: Double.infinity, count: vertexes.count)
-        //lets assume from index 0
-        distances[vertexFrom.index] = 0
-        
-        var first = Pair(index: vertexFrom.index, distance: 0)
-        CFBinaryHeapAddValue(pq, &first)
-        while CFBinaryHeapGetCount(pq) > 0 {
-            let pair = CFBinaryHeapGetMinimum(pq).assumingMemoryBound(to: Pair.self).pointee
-            CFBinaryHeapRemoveMinimumValue(pq)
-            for edge in edgesList[pair.index].edges {
-                //get current distance
-                let c = distances [edge.to.index]
-                if (c > distances[pair.index] + edge.weight) {
-                    //we found a shorter path
-                    let shorterDistance = distances[pair.index] + edge.weight
-                    distances[edge.to.index] = distances[pair.index] + edge.weight
-                    var p = Pair(index: edge.to.index, distance: shorterDistance)
-                    CFBinaryHeapAddValue(pq, &p)
+         let vertexArray = edgesList.map {$0.vertex}
+         var distances = Array(repeating: Double.infinity, count: vertexArray.count)
+         distances[vertexFrom.index] = 0
+        for _ in 1..<vertexArray.count {
+            for item in edgesList {
+                for edge in item.edges {
+                    let fromIndex = edge.from.index
+                    let toIndex = edge.to.index
+                    let weight = edge.weight
+                    let c = distances[fromIndex] + weight
+                    if (distances[fromIndex] != Double.infinity && c < distances[toIndex]) {
+                        distances[toIndex] = c
+                    }
                 }
             }
         }

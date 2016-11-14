@@ -10,6 +10,14 @@ import Foundation
 import GraphKit
 import SimpleNetworking
 
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundTo(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+
 private struct Conversion: JSONInitializable {
     var from: String
     var to: String
@@ -42,14 +50,12 @@ struct ConversionData: JSONInitializable {
         
         conversions = conversionsJson.flatMap {try? Conversion (json: $0)}
         graphView = Graph<String>()
-       
         
         for conversion in self.conversions {
-            print(conversion)
             graphView.createVertex(data: conversion.from)
             graphView.createVertex(data: conversion.to)
-            try! graphView.addDirectedEdge(from: conversion.from, to: conversion.to, withWeight: conversion.rate)
-            try! graphView.addDirectedEdge(from: conversion.to, to: conversion.from, withWeight: 1.0 / conversion.rate)
+            try! graphView.addDirectedEdge(from: conversion.from, to: conversion.to, withWeight: log2(conversion.rate))
+            try! graphView.addDirectedEdge(from: conversion.to, to: conversion.from, withWeight: log2(1.0 / conversion.rate))
         }
         currencies = graphView.vertexes()
     }

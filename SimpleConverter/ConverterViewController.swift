@@ -39,5 +39,8 @@ class ConverterViewController: UIViewController {
         viewModel.fromCurrencyDriver.drive(fromValueTextField.rx.text).addDisposableTo(disposeBag)
         viewModel.toCurrencyDriver.drive(toValueTextField.rx.text).addDisposableTo(disposeBag)
         viewModel.title.drive(navigationItem.rx.title).addDisposableTo(disposeBag)
+        
+        
     }
+    
 }

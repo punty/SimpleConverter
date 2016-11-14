@@ -38,14 +38,12 @@ final class ConverterViewModel: ConverterViewModelType {
     var toCurrency: Driver<String>
     var fromValue: Driver<String>
     var toValue: Driver<String>
-    
     var rate: Variable<Double?>
     
     //output
     var toCurrencyDriver: Driver<String>
     var fromCurrencyDriver: Driver<String>
     var currencies: Variable<ConversionData?>
-    
     
     var service: ConversionServiceProtocol
     
@@ -63,16 +61,19 @@ final class ConverterViewModel: ConverterViewModelType {
         toCurrency = input.toCurrency
         fromValue = input.fromValue
         toValue = input.toValue
-        rate = Variable<Double?> (2.0)
+        rate = Variable<Double?> (nil)
         
         let rateDriver = rate.asDriver()
         
         Driver.combineLatest(fromCurrency, toCurrency, currencies.asDriver()) {
             from, to, data in
-            print("122")
             if let data = data {
                 do {
-                   return try data.graphView.shortestPath(from: from, to: to)
+                   let rate = try data.graphView.shortestPath(from: from, to: to)
+                    if rate.isFinite {
+                        return exp2(rate)
+                    }
+                    return 0.0
                 } catch {
                     return 0.0
                 }
@@ -82,18 +83,23 @@ final class ConverterViewModel: ConverterViewModelType {
         
         toCurrencyDriver = Driver.combineLatest(fromValue, rateDriver) {
             from, rate in
-           
             let fromValue = Double(from)
             if let fromValue = fromValue, let rate = rate {
-              return String (fromValue * rate)
+                if fromValue.isFinite {
+                     return String (format:"%.2f",fromValue * rate)
+                }
+              
             }
             return "---"
         }
+        
         fromCurrencyDriver = Driver.combineLatest(toValue, rateDriver) {
             from, rate in
             let fromValue = Double(from)
             if let fromValue = fromValue, let rate = rate {
-                return String (fromValue * rate)
+                if fromValue.isFinite && rate > 0 {
+                    return String (format:"%.2f",fromValue / rate)
+                }
             }
             return "---"
         }
@@ -110,12 +116,4 @@ final class ConverterViewModel: ConverterViewModelType {
             }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }

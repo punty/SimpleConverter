@@ -31,6 +31,7 @@
 		916C95761DD2D065008254D4 /* SimpleNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */; };
 		916C95771DD2D065008254D4 /* SimpleNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		916C957D1DD2D081008254D4 /* SimpleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C957C1DD2D081008254D4 /* SimpleNetworking.swift */; };
+		916ED6D11DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916ED6D01DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift */; };
 		918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BA49A1DD4AF7700428843 /* Conversion.swift */; };
 		91FBEBDD1DD752A9008A6BC4 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */; };
 		91FBEBDE1DD752A9008A6BC4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */; };
@@ -112,6 +113,7 @@
 		916C95711DD2D065008254D4 /* SimpleNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleNetworking.h; sourceTree = "<group>"; };
 		916C95721DD2D065008254D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916C957C1DD2D081008254D4 /* SimpleNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworking.swift; sourceTree = "<group>"; };
+		916ED6D01DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPickerDataSource.swift; sourceTree = "<group>"; };
 		918BA49A1DD4AF7700428843 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				916C955F1DD2D00F008254D4 /* Assets.xcassets */,
 				916C95611DD2D00F008254D4 /* LaunchScreen.storyboard */,
 				916C95641DD2D00F008254D4 /* Info.plist */,
+				916ED6D01DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift */,
 			);
 			path = SimpleConverter;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				916C95591DD2D00F008254D4 /* AppDelegate.swift in Sources */,
 				914AD4781DD5BDE6000CD6BF /* UITableView+ItemCell.swift in Sources */,
 				914AD4731DD5BDE6000CD6BF /* ConverterViewController.swift in Sources */,
+				916ED6D11DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

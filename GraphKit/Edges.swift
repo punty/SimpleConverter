@@ -13,9 +13,9 @@ public func == <T>(lhs: Edge<T>, rhs: Edge<T>) -> Bool {
 }
 
 public struct Edge<T>: Equatable where T: Equatable, T: Hashable {
-    let from: Vertex<T>
-    let to: Vertex<T>
-    let weight: Double
+    public let from: Vertex<T>
+    public let to: Vertex<T>
+    public let weight: Double
 }
 
 extension Edge : Hashable {
