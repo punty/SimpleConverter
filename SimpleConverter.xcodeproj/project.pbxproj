@@ -30,6 +30,10 @@
 		916C957D1DD2D081008254D4 /* SimpleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C957C1DD2D081008254D4 /* SimpleNetworking.swift */; };
 		916ED6D11DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916ED6D01DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift */; };
 		918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BA49A1DD4AF7700428843 /* Conversion.swift */; };
+		91C96E1F1DD9C7BD001EDCBA /* SimpleConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C96E1E1DD9C7BD001EDCBA /* SimpleConverterTests.swift */; };
+		91C96E271DD9CB2A001EDCBA /* currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 91C96E261DD9CB2A001EDCBA /* currency.json */; };
+		91C96E291DD9CBA1001EDCBA /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C96E281DD9CBA1001EDCBA /* Mocks.swift */; };
+		91C96E2B1DD9CC05001EDCBA /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C96E2A1DD9CC05001EDCBA /* RxTest.framework */; };
 		91FBEBDD1DD752A9008A6BC4 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */; };
 		91FBEBDE1DD752A9008A6BC4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */; };
 		91FBEBE71DD75E69008A6BC4 /* SimpleNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBEBE61DD75E69008A6BC4 /* SimpleNetworkingTests.swift */; };
@@ -57,6 +61,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 916C956E1DD2D065008254D4;
 			remoteInfo = SimpleNetworking;
+		};
+		91C96E211DD9C7BD001EDCBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 916C954D1DD2D00F008254D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 916C95541DD2D00F008254D4;
+			remoteInfo = SimpleConverter;
 		};
 		91FBEBEA1DD75E69008A6BC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -109,6 +120,12 @@
 		916C957C1DD2D081008254D4 /* SimpleNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworking.swift; sourceTree = "<group>"; };
 		916ED6D01DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPickerDataSource.swift; sourceTree = "<group>"; };
 		918BA49A1DD4AF7700428843 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		91C96E1C1DD9C7BD001EDCBA /* SimpleConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C96E1E1DD9C7BD001EDCBA /* SimpleConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleConverterTests.swift; sourceTree = "<group>"; };
+		91C96E201DD9C7BD001EDCBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C96E261DD9CB2A001EDCBA /* currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currency.json; sourceTree = "<group>"; };
+		91C96E281DD9CBA1001EDCBA /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		91C96E2A1DD9CC05001EDCBA /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		91FBEBE41DD75E69008A6BC4 /* SimpleNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +164,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C96E191DD9C7BD001EDCBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C96E2B1DD9CC05001EDCBA /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +216,7 @@
 				91542D9F1DD47C0600EC1767 /* GraphKit */,
 				91542DD71DD47D4500EC1767 /* GraphKitTests */,
 				91FBEBE51DD75E69008A6BC4 /* SimpleNetworkingTests */,
+				91C96E1D1DD9C7BD001EDCBA /* SimpleConverterTests */,
 				916C95561DD2D00F008254D4 /* Products */,
 				91FBEBDA1DD752A9008A6BC4 /* Frameworks */,
 			);
@@ -204,6 +230,7 @@
 				91542D9E1DD47C0600EC1767 /* GraphKit.framework */,
 				91542DD61DD47D4500EC1767 /* GraphKitTests.xctest */,
 				91FBEBE41DD75E69008A6BC4 /* SimpleNetworkingTests.xctest */,
+				91C96E1C1DD9C7BD001EDCBA /* SimpleConverterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,7 +254,6 @@
 		916C95701DD2D065008254D4 /* SimpleNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				91FBEBE51DD75E69008A6BC4 /* SimpleNetworkingTests */,
 				916C957C1DD2D081008254D4 /* SimpleNetworking.swift */,
 				916C95711DD2D065008254D4 /* SimpleNetworking.h */,
 				916C95721DD2D065008254D4 /* Info.plist */,
@@ -269,9 +295,21 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		91C96E1D1DD9C7BD001EDCBA /* SimpleConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				91C96E1E1DD9C7BD001EDCBA /* SimpleConverterTests.swift */,
+				91C96E201DD9C7BD001EDCBA /* Info.plist */,
+				91C96E261DD9CB2A001EDCBA /* currency.json */,
+				91C96E281DD9CBA1001EDCBA /* Mocks.swift */,
+			);
+			path = SimpleConverterTests;
+			sourceTree = "<group>";
+		};
 		91FBEBDA1DD752A9008A6BC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91C96E2A1DD9CC05001EDCBA /* RxTest.framework */,
 				91FBEBDB1DD752A9008A6BC4 /* RxCocoa.framework */,
 				91FBEBDC1DD752A9008A6BC4 /* RxSwift.framework */,
 			);
@@ -384,6 +422,25 @@
 			productReference = 916C956F1DD2D065008254D4 /* SimpleNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		91C96E1B1DD9C7BD001EDCBA /* SimpleConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C96E251DD9C7BD001EDCBA /* Build configuration list for PBXNativeTarget "SimpleConverterTests" */;
+			buildPhases = (
+				91C96E181DD9C7BD001EDCBA /* Sources */,
+				91C96E191DD9C7BD001EDCBA /* Frameworks */,
+				91C96E1A1DD9C7BD001EDCBA /* Resources */,
+				9137D5C41DD9D29E0009A8B8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91C96E221DD9C7BD001EDCBA /* PBXTargetDependency */,
+			);
+			name = SimpleConverterTests;
+			productName = SimpleConverterTests;
+			productReference = 91C96E1C1DD9C7BD001EDCBA /* SimpleConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		91FBEBE31DD75E69008A6BC4 /* SimpleNetworkingTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91FBEBEC1DD75E69008A6BC4 /* Build configuration list for PBXNativeTarget "SimpleNetworkingTests" */;
@@ -430,6 +487,11 @@
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
+					91C96E1B1DD9C7BD001EDCBA = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 916C95541DD2D00F008254D4;
+					};
 					91FBEBE31DD75E69008A6BC4 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -454,6 +516,7 @@
 				91542D9D1DD47C0600EC1767 /* GraphKit */,
 				91542DD51DD47D4500EC1767 /* GraphKitTests */,
 				91FBEBE31DD75E69008A6BC4 /* SimpleNetworkingTests */,
+				91C96E1B1DD9C7BD001EDCBA /* SimpleConverterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -490,6 +553,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91C96E1A1DD9C7BD001EDCBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C96E271DD9CB2A001EDCBA /* currency.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91FBEBE21DD75E69008A6BC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,6 +571,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9137D5C41DD9D29E0009A8B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		91FBEBDF1DD752C6008A6BC4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -559,6 +644,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91C96E181DD9C7BD001EDCBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C96E1F1DD9C7BD001EDCBA /* SimpleConverterTests.swift in Sources */,
+				91C96E291DD9CBA1001EDCBA /* Mocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91FBEBE01DD75E69008A6BC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,6 +678,11 @@
 			isa = PBXTargetDependency;
 			target = 916C956E1DD2D065008254D4 /* SimpleNetworking */;
 			targetProxy = 916C95741DD2D065008254D4 /* PBXContainerItemProxy */;
+		};
+		91C96E221DD9C7BD001EDCBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 916C95541DD2D00F008254D4 /* SimpleConverter */;
+			targetProxy = 91C96E211DD9C7BD001EDCBA /* PBXContainerItemProxy */;
 		};
 		91FBEBEB1DD75E69008A6BC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -853,6 +952,40 @@
 			};
 			name = Release;
 		};
+		91C96E231DD9C7BD001EDCBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SimpleConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fp.SimpleConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleConverter.app/SimpleConverter";
+			};
+			name = Debug;
+		};
+		91C96E241DD9C7BD001EDCBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SimpleConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fp.SimpleConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleConverter.app/SimpleConverter";
+			};
+			name = Release;
+		};
 		91FBEBED1DD75E69008A6BC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -919,6 +1052,15 @@
 			buildConfigurations = (
 				916C95791DD2D065008254D4 /* Debug */,
 				916C957A1DD2D065008254D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C96E251DD9C7BD001EDCBA /* Build configuration list for PBXNativeTarget "SimpleConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C96E231DD9C7BD001EDCBA /* Debug */,
+				91C96E241DD9C7BD001EDCBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
