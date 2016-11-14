@@ -50,7 +50,6 @@ public class Graph<T> where T:Hashable {
         }
         let edge = Edge(from: vertexFrom, to: vertexTo, weight: weight)
         let edgeList = edgesList[vertexFrom.index]
-        print("\(edge.from.data) -> \(edge.to.data) \(edge.weight)")
         edgeList.add(edge:edge)
     }
     

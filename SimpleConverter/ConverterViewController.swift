@@ -11,7 +11,8 @@ import SimpleNetworking
 import RxSwift
 import RxCocoa
 
-
+//view controller is very simple no need to test binding
+//this is already tested using RxSwift
 class ConverterViewController: UIViewController {
 
     @IBOutlet weak var currencies: UILabel!

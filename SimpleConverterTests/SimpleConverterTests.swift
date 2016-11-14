@@ -17,8 +17,9 @@ class SimpleConverterTests: XCTestCase {
     let disposeBag = DisposeBag()
     
     func testToCurrencyDriver() {
-        let scheduler = TestScheduler(initialClock: 0)
-        let observer = scheduler.createObserver(String.self)
+       let scheduler = TestScheduler(initialClock: 0)
+       let observerTo = scheduler.createObserver(String.self)
+       let observerFrom = scheduler.createObserver(String.self)
         
        let viewModel = ConverterViewModel (input:
             (fromCurrency: .just("EUR"),
@@ -26,13 +27,16 @@ class SimpleConverterTests: XCTestCase {
              fromValue: .just("10.0"),
              toValue: .just("10.0")
             )
-            , service: ServiceMock())
+            , service: ServiceMock(fileName: "currency"))
         
-        viewModel.toCurrencyDriver.asObservable().subscribe(observer).addDisposableTo(disposeBag)
-        XCTAssert( observer.events.count == 1)
+        viewModel.toCurrencyDriver.asObservable().subscribe(observerTo).addDisposableTo(disposeBag)
+        viewModel.toCurrencyDriver.asObservable().subscribe(observerFrom).addDisposableTo(disposeBag)
+        XCTAssert( observerTo.events.count == 1)
+        XCTAssert( observerFrom.events.count == 1)
         let correctValues = [
             next(0, "10.00")
         ]
-        XCTAssertEqual(observer.events, correctValues)
+        XCTAssertEqual(observerTo.events, correctValues)
+        XCTAssertEqual(observerFrom.events, correctValues)
     }
 }

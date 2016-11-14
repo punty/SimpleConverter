@@ -16,9 +16,9 @@ protocol ConversionServiceProtocol {
 //here I should use API to get the latest conversion
 final class ConversionService: ConversionServiceProtocol {
     
-    let serviceClient: ServiceClient
+    let serviceClient: ServiceClientType
     
-    init(serviceClient: ServiceClient) {
+    init(serviceClient: ServiceClientType) {
         self.serviceClient = serviceClient
     }
     

@@ -1,0 +1,31 @@
+{
+    "conversions": [{
+                    "from": "EUR",
+                    "to": "USD",
+                    "rate": 1.09833
+                    }, {
+                    "from": "USD",
+                    "to": "JPY",
+                    "rate": 123.779
+                    }, {
+                    "from": "GBP",
+                    "to": "USD",
+                    "rate": 1.52967
+                    }, {
+                    "from": "USD",
+                    "to": "CHF",
+                    "rate": 0.94159
+                    }, {
+                    "from": "USD",
+                    "to": "CAD",
+                    "rate": 1.24333
+                    }, {
+                    "from": "EUR",
+                    "to": "JPY",
+                    "rate": 135.950
+                    }, {
+                    "from": "AUD",
+                    "to": "USD",
+                    "rate": 0.76577
+                    }]
+}

@@ -29,11 +29,13 @@ protocol ConverterViewModelType: ViewControllerViewModelType {
     var fromCurrencyDriver: Driver<String> { get }
 }
 
+//very simple input/output view model
+
 final class ConverterViewModel: ConverterViewModelType {
     
-    var title: Driver<String> = .just("Simple Converter")
     let disposeBag = DisposeBag()
     
+    //input
     var fromCurrency: Driver<String>
     var toCurrency: Driver<String>
     var fromValue: Driver<String>
@@ -41,6 +43,7 @@ final class ConverterViewModel: ConverterViewModelType {
     var rate: Variable<Double?>
     
     //output
+    var title: Driver<String> = .just("Simple Converter")
     var toCurrencyDriver: Driver<String>
     var fromCurrencyDriver: Driver<String>
     var currencies: Variable<ConversionData?>
