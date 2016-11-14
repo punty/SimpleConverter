@@ -85,6 +85,5 @@ public class Graph<T> where T:Hashable {
             throw GraphKitError.VertexNotFoundInGraph
         }
         return paths[vertexTo.index]
-       
     }
 }

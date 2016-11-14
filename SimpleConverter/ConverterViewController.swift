@@ -14,6 +14,7 @@ import RxCocoa
 
 class ConverterViewController: UIViewController {
 
+    @IBOutlet weak var currencies: UILabel!
     //outlets
     @IBOutlet weak var fromCurrencyTextField: UITextField!
     @IBOutlet weak var toCurrencyTextField: UITextField!
@@ -39,8 +40,7 @@ class ConverterViewController: UIViewController {
         viewModel.fromCurrencyDriver.drive(fromValueTextField.rx.text).addDisposableTo(disposeBag)
         viewModel.toCurrencyDriver.drive(toValueTextField.rx.text).addDisposableTo(disposeBag)
         viewModel.title.drive(navigationItem.rx.title).addDisposableTo(disposeBag)
-        
-        
+        viewModel.availableCurrencies.map {return $0?.joined(separator: ", ")}.drive(currencies.rx.text).addDisposableTo(disposeBag)
     }
     
 }

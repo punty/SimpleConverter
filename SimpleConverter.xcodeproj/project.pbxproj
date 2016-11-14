@@ -10,10 +10,7 @@
 		914AD4721DD5BDE6000CD6BF /* ConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AD46B1DD5BDE6000CD6BF /* ConversionService.swift */; };
 		914AD4731DD5BDE6000CD6BF /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AD46C1DD5BDE6000CD6BF /* ConverterViewController.swift */; };
 		914AD4741DD5BDE6000CD6BF /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AD46D1DD5BDE6000CD6BF /* ConverterViewModel.swift */; };
-		914AD4751DD5BDE6000CD6BF /* ItemCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AD46E1DD5BDE6000CD6BF /* ItemCellType.swift */; };
 		914AD4761DD5BDE6000CD6BF /* SimpleConverterAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AD46F1DD5BDE6000CD6BF /* SimpleConverterAPIs.swift */; };
-		914AD4771DD5BDE6000CD6BF /* SingleSectionItemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AD4701DD5BDE6000CD6BF /* SingleSectionItemsDataSource.swift */; };
-		914AD4781DD5BDE6000CD6BF /* UITableView+ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AD4711DD5BDE6000CD6BF /* UITableView+ItemCell.swift */; };
 		91542DA21DD47C0600EC1767 /* GraphKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 91542DA01DD47C0600EC1767 /* GraphKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91542DA51DD47C0600EC1767 /* GraphKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91542D9E1DD47C0600EC1767 /* GraphKit.framework */; };
 		91542DA61DD47C0600EC1767 /* GraphKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91542D9E1DD47C0600EC1767 /* GraphKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -89,10 +86,7 @@
 		914AD46B1DD5BDE6000CD6BF /* ConversionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionService.swift; sourceTree = "<group>"; };
 		914AD46C1DD5BDE6000CD6BF /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
 		914AD46D1DD5BDE6000CD6BF /* ConverterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
-		914AD46E1DD5BDE6000CD6BF /* ItemCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellType.swift; sourceTree = "<group>"; };
 		914AD46F1DD5BDE6000CD6BF /* SimpleConverterAPIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleConverterAPIs.swift; sourceTree = "<group>"; };
-		914AD4701DD5BDE6000CD6BF /* SingleSectionItemsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSectionItemsDataSource.swift; sourceTree = "<group>"; };
-		914AD4711DD5BDE6000CD6BF /* UITableView+ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+ItemCell.swift"; sourceTree = "<group>"; };
 		91542D9E1DD47C0600EC1767 /* GraphKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91542DA01DD47C0600EC1767 /* GraphKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
 		91542DA11DD47C0600EC1767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,20 +211,15 @@
 		916C95571DD2D00F008254D4 /* SimpleConverter */ = {
 			isa = PBXGroup;
 			children = (
-				914AD46B1DD5BDE6000CD6BF /* ConversionService.swift */,
-				914AD46C1DD5BDE6000CD6BF /* ConverterViewController.swift */,
-				914AD46D1DD5BDE6000CD6BF /* ConverterViewModel.swift */,
-				914AD46E1DD5BDE6000CD6BF /* ItemCellType.swift */,
-				914AD46F1DD5BDE6000CD6BF /* SimpleConverterAPIs.swift */,
-				914AD4701DD5BDE6000CD6BF /* SingleSectionItemsDataSource.swift */,
-				914AD4711DD5BDE6000CD6BF /* UITableView+ItemCell.swift */,
+				91C96E151DD9BC85001EDCBA /* Services */,
+				91C96E161DD9BC8E001EDCBA /* View */,
+				91C96E171DD9BC95001EDCBA /* ViewModel */,
 				918BA4991DD4A93B00428843 /* Model */,
 				916C95581DD2D00F008254D4 /* AppDelegate.swift */,
 				916C955C1DD2D00F008254D4 /* Main.storyboard */,
 				916C955F1DD2D00F008254D4 /* Assets.xcassets */,
 				916C95611DD2D00F008254D4 /* LaunchScreen.storyboard */,
 				916C95641DD2D00F008254D4 /* Info.plist */,
-				916ED6D01DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift */,
 			);
 			path = SimpleConverter;
 			sourceTree = "<group>";
@@ -238,6 +227,7 @@
 		916C95701DD2D065008254D4 /* SimpleNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				91FBEBE51DD75E69008A6BC4 /* SimpleNetworkingTests */,
 				916C957C1DD2D081008254D4 /* SimpleNetworking.swift */,
 				916C95711DD2D065008254D4 /* SimpleNetworking.h */,
 				916C95721DD2D065008254D4 /* Info.plist */,
@@ -251,6 +241,32 @@
 				918BA49A1DD4AF7700428843 /* Conversion.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		91C96E151DD9BC85001EDCBA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				914AD46B1DD5BDE6000CD6BF /* ConversionService.swift */,
+				914AD46F1DD5BDE6000CD6BF /* SimpleConverterAPIs.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		91C96E161DD9BC8E001EDCBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				916ED6D01DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift */,
+				914AD46C1DD5BDE6000CD6BF /* ConverterViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		91C96E171DD9BC95001EDCBA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				914AD46D1DD5BDE6000CD6BF /* ConverterViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		91FBEBDA1DD752A9008A6BC4 /* Frameworks */ = {
@@ -269,7 +285,7 @@
 				91FBEBE81DD75E69008A6BC4 /* Info.plist */,
 			);
 			path = SimpleNetworkingTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -525,14 +541,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914AD4751DD5BDE6000CD6BF /* ItemCellType.swift in Sources */,
 				918BA49B1DD4AF7700428843 /* Conversion.swift in Sources */,
 				914AD4761DD5BDE6000CD6BF /* SimpleConverterAPIs.swift in Sources */,
 				914AD4741DD5BDE6000CD6BF /* ConverterViewModel.swift in Sources */,
 				914AD4721DD5BDE6000CD6BF /* ConversionService.swift in Sources */,
-				914AD4771DD5BDE6000CD6BF /* SingleSectionItemsDataSource.swift in Sources */,
 				916C95591DD2D00F008254D4 /* AppDelegate.swift in Sources */,
-				914AD4781DD5BDE6000CD6BF /* UITableView+ItemCell.swift in Sources */,
 				914AD4731DD5BDE6000CD6BF /* ConverterViewController.swift in Sources */,
 				916ED6D11DD9ABF800BE25A2 /* CurrencyPickerDataSource.swift in Sources */,
 			);
