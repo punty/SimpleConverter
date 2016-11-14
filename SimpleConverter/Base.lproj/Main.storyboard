@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oLZ-F7-xZT">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oLZ-F7-xZT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,7 +46,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.64377313852310181" green="0.98841899633407593" blue="0.79513907432556152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQx-yp-rwZ">
                                 <rect key="frame" x="113" y="173" width="246" height="30"/>
@@ -56,7 +56,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.64377313849999995" green="0.98841899629999996" blue="0.79513907429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQO-lU-jRw">
                                 <rect key="frame" x="16" y="107" width="89" height="30"/>
@@ -98,11 +98,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To use this app just type one of the available currency in the green box. Then insert the value in one of the red boxes. Enjoy!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqd-Xn-n7m">
+                                <rect key="frame" x="10" y="557" width="355" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="vYm-cJ-MrD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cQO-lU-jRw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1T6-Pz-g4T"/>
                             <constraint firstItem="Cph-VA-u3W" firstAttribute="top" secondItem="cQO-lU-jRw" secondAttribute="top" id="3e0-OC-pLx"/>
+                            <constraint firstAttribute="trailing" secondItem="Nqd-Xn-n7m" secondAttribute="trailing" constant="10" id="9OB-Kl-dQ3"/>
                             <constraint firstItem="iQi-zr-hqY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BIF-lp-M7Q"/>
                             <constraint firstItem="iQi-zr-hqY" firstAttribute="top" secondItem="hgH-5m-k2E" secondAttribute="bottom" constant="24" id="CL5-et-rcn"/>
                             <constraint firstItem="eQx-yp-rwZ" firstAttribute="leading" secondItem="avE-L3-k1U" secondAttribute="trailing" constant="8" id="GQ8-CX-tSQ"/>
@@ -113,9 +123,11 @@
                             <constraint firstItem="hgH-5m-k2E" firstAttribute="top" secondItem="avE-L3-k1U" secondAttribute="bottom" constant="30" id="XtI-CB-xPv"/>
                             <constraint firstItem="avE-L3-k1U" firstAttribute="top" secondItem="cQO-lU-jRw" secondAttribute="bottom" constant="36" id="YQM-Zt-zJp"/>
                             <constraint firstItem="iQi-zr-hqY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="b2G-XT-u9r"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nqd-Xn-n7m" secondAttribute="bottom" constant="10" id="dXP-BI-w4d"/>
                             <constraint firstItem="Cph-VA-u3W" firstAttribute="leading" secondItem="cQO-lU-jRw" secondAttribute="trailing" constant="8" id="w11-Qo-bJE"/>
                             <constraint firstItem="avE-L3-k1U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wNX-FQ-89f"/>
                             <constraint firstItem="Cph-VA-u3W" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yvV-gO-mVy"/>
+                            <constraint firstItem="Nqd-Xn-n7m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="zBv-fq-02a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KEZ-IR-wUn"/>
